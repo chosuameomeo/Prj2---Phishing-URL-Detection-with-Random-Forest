@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "URL Phishing Detector",
+  "version": "1.0",
+  "description": "Detect phishing URLs in real-time",
+  "permissions": [
+      "tabs",
+      "storage"
+  ],
+  "host_permissions": [
+      "http://127.0.0.1:5000/*", 
+      "<all_urls>" 
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+   "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "popup.js", "icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "action": {
+    "default_title": "Phishing Detector",
+    "default_icon": "icon.png"
+  },
+
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

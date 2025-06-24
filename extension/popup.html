@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cảnh Báo An Toàn</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #fff0f0; 
+            color: #58151c; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            min-height: calc(100vh - 40px); 
+            text-align: center; 
+            box-sizing: border-box;
+        }
+        .container { 
+            background-color: #ffffff; 
+            padding: 30px 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            max-width: 600px;
+            border: 1px solid #f5c6cb; 
+        }
+        h1 { 
+            color: #d32f2f; 
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        p { 
+            font-size: 1.1em; 
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .url-display { 
+            word-break: break-all; 
+            background-color: #f8f9fa; 
+            padding: 12px 16px;
+            border-radius: 4px; 
+            margin: 25px 0; 
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.95em;
+            border: 1px solid #dee2e6;
+            color: #495057;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons button {
+            padding: 12px 25px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        #proceed-anyway { 
+            background-color: #ffc107; /* Màu vàng là cảnh báo */
+            color: #212529; 
+        }
+        #proceed-anyway:hover {
+            background-color: #e0a800;
+        }
+        #proceed-anyway:active {
+            transform: translateY(1px);
+        }
+        #go-back { 
+            background-color: #007bff; /* Màu xanh thì an toàn */
+            color: white; 
+        }
+        #go-back:hover {
+            background-color: #0056b3;
+        }
+        #go-back:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cảnh Báo An Ninh!</h1>
+        <p>Trang web bạn đang cố gắng truy cập có dấu hiệu lừa đảo hoặc không an toàn:</p>
+        <div class="url-display" id="original-url">Đang tải URL...</div>
+        <p>Chúng tôi khuyến cáo bạn không nên tiếp tục để bảo vệ thông tin cá nhân và thiết bị của mình.</p>
+        <div class="buttons">
+            <button id="go-back">Quay Lại An Toàn</button>
+            <button id="proceed-anyway">Tiếp Tục (Rủi Ro Cao)</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
